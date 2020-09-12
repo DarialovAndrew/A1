@@ -30,7 +30,6 @@ public class Main {
         SheduleService sheduleService = sheduleService(trainerMeets, cleanerTimes, groupMeets);
 
         Gym gym = new Gym(staff, owner, clients, goodsService, true, sheduleService);
-
         simulate(gym, date);
     }
 
