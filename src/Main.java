@@ -61,7 +61,12 @@ public class Main {
                     clients1.add(clients.get(q));
                 }
             }
-            groupMeets.add(new GroupMeet(clients1, trainers.get(j), date.get(i), 15));
+            GroupMeet groupMeet = new GroupMeet(trainers.get(j), date.get(i), 15);
+            for (Client client : clients1) {
+                groupMeet.addClient(client);
+            }
+            groupMeets.add(groupMeet);
+
         }
         return groupMeets;
     }
@@ -71,7 +76,7 @@ public class Main {
             Date date1 = date.get(0);
             System.out.println(date1);
 
-            gym.getOwner().SayResults();
+            gym.getOwner().sayResults();
 
             shedulework(gym, date1);
 

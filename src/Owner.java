@@ -7,7 +7,7 @@ public final class Owner {
         this.profit = profit;
     }
 
-    public void SayResults() {
+    public void sayResults() {
         System.out.println("Current profit is:" + profit);
     }
 

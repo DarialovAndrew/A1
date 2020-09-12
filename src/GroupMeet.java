@@ -7,11 +7,15 @@ public final class GroupMeet {
     private Date date;
     private final int maxClients;
 
-    public GroupMeet(ArrayList<Client> clients, Trainer trainer, Date date, int maxClients) {
-        this.clients = clients;
+    public GroupMeet(Trainer trainer, Date date, int maxClients) {
+        this.clients = new ArrayList<Client>();
         this.trainer = trainer;
         this.date = date;
         this.maxClients = maxClients;
+    }
+
+    public void addClient(Client client){
+        this.clients.add(client);
     }
 
     public ArrayList<Client> getClients() {
